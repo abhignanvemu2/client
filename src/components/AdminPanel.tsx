@@ -24,7 +24,7 @@ const AdminPanel = () => {
   const fetchUserData = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/auth/me', {
+      const response = await fetch('https://client-o7ls.onrender.com/api/auth/me', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -45,7 +45,7 @@ const AdminPanel = () => {
 
   const fetchVideos = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/videos');
+      const response = await fetch('https://client-o7ls.onrender.com/api/videos');
       if (response.ok) {
         const data = await response.json();
         setVideos(data);
@@ -148,7 +148,7 @@ const ProfileTab = ({ user, setUser }) => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/portfolio/update', {
+      const response = await fetch('https://client-o7ls.onrender.com/api/portfolio/update', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -272,7 +272,7 @@ const VideosTab = ({ videos, setVideos }) => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/videos/upload', {
+      const response = await fetch('https://client-o7ls.onrender.com/api/videos/upload', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -299,7 +299,7 @@ const VideosTab = ({ videos, setVideos }) => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/videos/${id}`, {
+      const response = await fetch(`https://client-o7ls.onrender.com/api/videos/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -445,7 +445,7 @@ const VideosTab = ({ videos, setVideos }) => {
           >
             <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
               <video
-                src={`http://localhost:5000/uploads/${video.filename}`}
+                src={`https://client-o7ls.onrender.com/uploads/${video.filename}`}
                 className="w-full h-full object-cover"
                 controls
               />

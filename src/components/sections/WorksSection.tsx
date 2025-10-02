@@ -23,7 +23,7 @@ const WorksSection = ({ videos = [] }) => {
   useEffect(() => {
     videos.forEach((video) => {
       if (video.filename && !thumbnails[video._id]) {
-        generateThumbnail(`http://localhost:5000/uploads/${video.filename}`)
+        generateThumbnail(`https://client-o7ls.onrender.com/uploads/${video.filename}`)
           .then((thumbnail) => {
             setThumbnails((prev) => ({ ...prev, [video._id]: thumbnail }));
           })
@@ -217,7 +217,7 @@ const generateThumbnail = (videoUrl) => {
                     controls
                     autoPlay
                     className="w-full h-full"
-                    src={`http://localhost:5000/uploads/${selectedVideo.filename}`}
+                    src={`https://client-o7ls.onrender.com/uploads/${selectedVideo.filename}`}
                     // poster={thumbnails[video._id] || ""}
                   />
                 </div>

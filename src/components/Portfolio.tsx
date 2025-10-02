@@ -27,7 +27,7 @@ const Portfolio = () => {
 
   const fetchPortfolioData = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/portfolio/public');
+      const response = await fetch('https://client-o7ls.onrender.com/api/portfolio/public');
       if (response.ok) {
         const data = await response.json();
         setPortfolioData(data);
@@ -39,7 +39,7 @@ const Portfolio = () => {
 
   const fetchVideos = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/videos');
+      const response = await fetch('https://client-o7ls.onrender.com/api/videos');
       if (response.ok) {
         const data = await response.json();
         setVideos(data);
