@@ -29,6 +29,7 @@ const Navigation = ({ activeSection, setActiveSection, portfolioData }) => {
             <p className="text-purple-300 text-sm mt-1">
               {portfolioData?.title || 'Creative Professional'}
             </p>
+            <a className='text-white' href='/login'>Login</a>
           </motion.div>
 
           {/* <motion.a

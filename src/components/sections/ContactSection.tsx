@@ -54,7 +54,7 @@ const ContactSection = ({ data }) => {
               {[
                 { icon: Mail, label: 'Email', value: contact.email, href: `mailto:${contact.email}` },
                 { icon: Phone, label: 'Phone', value: contact.phone, href: `tel:${contact.phone}` },
-                { icon: MapPin, label: 'Location', value: contact.location }
+                { icon: MapPin, label: 'Location', value: contact.location || "Kormangala, Banglore" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -77,7 +77,7 @@ const ContactSection = ({ data }) => {
             </motion.div>
 
             {/* Social Links */}
-            <motion.div
+            {/* <motion.div
               className="space-y-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -106,11 +106,11 @@ const ContactSection = ({ data }) => {
                   </motion.a>
                 ))}
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Right side - Contact Form */}
-          <motion.div
+          {/* <motion.div
             className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -175,7 +175,7 @@ const ContactSection = ({ data }) => {
               </motion.button>
             </motion.form>
 
-            {/* Availability indicator */}
+            {
             <motion.div
               className="mt-8 p-4 bg-green-500/20 border border-green-500/30 rounded-lg"
               initial={{ opacity: 0, scale: 0 }}
@@ -190,7 +190,7 @@ const ContactSection = ({ data }) => {
                 I typically respond within 24 hours
               </p>
             </motion.div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </div>
